@@ -1,0 +1,63 @@
+
+
+import UIKit
+
+//Diziler ve Sözlük Yapýsý (Array ve Dictionary)
+
+var str = [String]() //Boþ ve elemanlarý string olan bir dizi
+
+var tamsayi = [Int]() //Boþ ve elemanlarý integer olan bir dizi
+
+var OndalikliSayi = [Double]()
+
+//append -> diziye eleman ekler
+
+str.append("Swift")
+
+str.append("3")
+
+str.remove(at: 1)
+
+str.removeAll()
+
+str
+
+//Swift 4 ile geldi
+
+var kelime = ["kelime1","kelime3","kelime2"]
+
+kelime.swapAt(1,2)
+
+kelime
+
+//Tek taraflý sýnýr deðeri koyma Swift 4
+
+var sehirler = ["Adana","Adýyaman","Bursa","Çanakkale","Denizli"]
+
+let ilkSehirler = sehirler[..<2]
+
+let sonSehirler = sehirler[2...]
+
+sehirler.count // Eleman sayýsý bulunur
+
+//Dictionary kelime:anlamý -> key:value
+
+var kullaniciBilgileri = ["Adý":"Kerim","Soyadý":"Çaðlar","Meslek":"Yazýlým Geliþtirici"]
+
+kullaniciBilgileri.count
+
+kullaniciBilgileri.updateValue("Çaðlar2", forKey: "Soyadý")
+
+kullaniciBilgileri
+
+//Swift 4 ile geldi
+
+let yenidenDuzenleSehirler = ["Adana":"0","Adýyaman":"1","Bursa":"2","Çanakkale":"4", "Denizli":"5"]
+
+let sonDurum = Dictionary(grouping:yenidenDuzenleSehirler.keys) {$0.first!}
+
+let sayiyaGore = Dictionary(grouping:yenidenDuzenleSehirler.keys) {$0.count}
+
+sonDurum
+
+sayiyaGore
